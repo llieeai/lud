@@ -1,0 +1,7 @@
+torch==1.7.0
+yacs
+wandb
+scipy
+setuptools==58.2.0
+tqdm
+tensorboardX

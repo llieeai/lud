@@ -1,0 +1,22 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "cskd,vgg13,vgg8"
+  PROJECT: "cifar100_baselines"
+DISTILLER:
+  TYPE: "CSKD"
+  TEACHER: "vgg13"
+  STUDENT: "vgg8"
+SOLVER:
+  BATCH_SIZE: 64
+  EPOCHS: 480
+  LR: 0.025
+  LR_DECAY_STAGES: [150, 180, 210]
+  LR_DECAY_RATE: 0.1
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+  TRAINER: "ours"
+CSKD:
+  CSWT:
+    LOW_T: 2.0
+    HIGH_T: 6.0
